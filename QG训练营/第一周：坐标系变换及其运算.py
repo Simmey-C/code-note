@@ -113,21 +113,18 @@ def test_with_json_file(filename):
 
                 try:
                     if task_type == 'axis_angle':
-                        # 计算夹角
                         result = cs.axis_angle()
                         print(f"计算结果（向量与各轴的夹角，单位：弧度）:")
                         for i in result:
                             print(i)
 
                     elif task_type == 'axis_projection':
-                        # 计算投影
                         result = cs.axis_projection()
                         print(f"计算结果（向量在各轴上的投影长度）:")
                         for i in result:
                             print(i)
 
                     elif task_type == 'area':
-                        # 计算面积/体积
                         result = cs.axis_area()
                         if cs.dimension == 2:
                             print(f"坐标系面积缩放倍数: {result}")
